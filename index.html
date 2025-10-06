@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#475569">
+    <title>韓国スポット</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="icons/icon-192.png">
+    <meta name="description" content="韓国旅行のスポットを記録するアプリ">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="title-section">
+                    <div class="icon-box">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1>韓国スポット</h1>
+                        <p class="subtitle">行きたい場所を記録しよう</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="add-form">
+            <h2>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                新しい場所を追加
+            </h2>
+            <input 
+                type="text" 
+                id="mapUrl" 
+                placeholder="Google MapのURLを貼り付け"
+                class="input-field"
+            >
+            <input 
+                type="text" 
+                id="placeName" 
+                placeholder="場所の名前"
+                class="input-field"
+            >
+            <textarea 
+                id="placeMemo" 
+                placeholder="メモ (例: 営業時間、予算、持ち物など)"
+                class="textarea-field"
+                rows="3"
+            ></textarea>
+            <button id="addBtn" class="add-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                追加する
+            </button>
+        </div>
+
+        <div id="placesList" class="places-list"></div>
+
+        <div id="emptyState" class="empty-state">
+            <div class="empty-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+            </div>
+            <p class="empty-title">まだ場所が登録されていません</p>
+            <p class="empty-text">上のフォームから行きたい場所を追加しましょう</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
