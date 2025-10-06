@@ -2,7 +2,7 @@
     "name": "韓国スポット",
     "short_name": "韓国スポット",
     "description": "韓国旅行のスポットを記録するアプリ",
-    "start_url": "/",
+    "start_url": "./",
     "display": "standalone",
     "background_color": "#475569",
     "theme_color": "#475569",
