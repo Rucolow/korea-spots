@@ -1,10 +1,12 @@
-const CACHE_NAME = 'korea-spots-v1';
+const CACHE_NAME = 'korea-spots-v2';
 const urlsToCache = [
   './',
   './index.html',
   './styles.css',
   './app.js',
-  './manifest.json'
+  './manifest.json',
+  'https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js',
+  'https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js'
 ];
 
 self.addEventListener('install', event => {
